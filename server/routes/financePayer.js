@@ -1,3 +1,9 @@
+/*
+    Created by - Janith Gamage
+    On - 29/08/2021
+    Name - Finace payer routes
+ */
+
 import express from 'express';
 
 import { getPayers, createPayer, updatePayer, deletePayer } from '../controllers/financePayer.js';

@@ -1,8 +1,17 @@
+/*
+    Created by - Janith Gamage
+    On - 29/08/2021
+    Name - Finace payer Business Logic
+ */
+
 import mongoose from 'mongoose';
 import FinancePayer from '../models/financePayerschema.js';
 
 
-//get all the data
+/*
+Name - get allpayers
+Date - 29/08/2021
+ */
 export const getPayers = async (req, res) => { 
     try {
         const payers = await FinancePayer.find();  
@@ -13,7 +22,10 @@ export const getPayers = async (req, res) => {
     }
 }
 
-//create a post
+/*
+Name - create payer
+Date - 29/08/2021
+ */
 export const createPayer = async(req, res) => {
     const payer = req.body;
 
@@ -28,7 +40,10 @@ export const createPayer = async(req, res) => {
     }
 }
 
-//update a post
+/*
+Name - update payer
+Date - 29/08/2021
+ */
 export const updatePayer = async (req, res) => {
     const { id: _id } = req.params;
     const payer = req.body;
@@ -41,7 +56,10 @@ export const updatePayer = async (req, res) => {
 
 }
 
-//delete a post
+/*
+Name - delete payer
+Date - 29/08/2021
+ */
 export const deletePayer = async (req, res) => {
     const { id } = req.params; 
 

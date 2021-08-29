@@ -1,3 +1,9 @@
+/*
+    Created by - Janith Gamage
+    On - 29/08/2021
+    Name - test CRUD posts
+ */
+
 import express from 'express';
 
 import { getPosts, createPost, updatePost, deletePost, likePost } from '../controllers/posts.js';

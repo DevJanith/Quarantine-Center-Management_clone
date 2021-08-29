@@ -1,3 +1,9 @@
+/*
+    Created by - Janith Gamage
+    On - 29/08/2021
+    Name - Finace payer model
+ */
+
 import mongoose from "mongoose";
 
 //mongo db table (schema)

@@ -1,8 +1,17 @@
+/*
+    Created by - Janith Gamage
+    On - 29/08/2021
+    Name - Finace payment Business Logic
+ */ 
+
 import mongoose from 'mongoose';
 import FinancePayment from '../models/financePaymentschema.js';
 
 
-//get all the data
+/*
+Name - get all Payments
+Date - 29/08/2021
+ */
 export const getPaymnts = async (req, res) => { 
     try {
         const payments = await FinancePayment.find();  
@@ -13,7 +22,10 @@ export const getPaymnts = async (req, res) => {
     }
 }
 
-//create a post
+/*
+Name - create Payment
+Date - 29/08/2021
+ */
 export const createPayment = async(req, res) => {
     const payment = req.body;
 
@@ -28,7 +40,10 @@ export const createPayment = async(req, res) => {
     }
 }
 
-//update a post
+/*
+Name - gupdate Payment
+Date - 29/08/2021
+ */
 export const updatePayment = async (req, res) => {
     const { id: _id } = req.params;
     const payment = req.body;
@@ -41,7 +56,10 @@ export const updatePayment = async (req, res) => {
 
 }
 
-//delete a post
+/*
+Name - delete Payment
+Date - 29/08/2021
+ */
 export const deletePayment = async (req, res) => {
     const { id } = req.params; 
 

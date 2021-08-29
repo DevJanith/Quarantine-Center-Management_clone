@@ -1,3 +1,9 @@
+/*
+    Created by - Janith Gamage
+    On - 29/08/2021
+    Name - test CRUD model
+ */
+
 import mongoose from "mongoose";
 
 //mongo db table (schema)

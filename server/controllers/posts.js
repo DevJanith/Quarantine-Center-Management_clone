@@ -1,8 +1,17 @@
+/*
+    Created by - Janith Gamage
+    On - 29/08/2021
+    Name - Test Businness Logic
+ */
+
 import mongoose from 'mongoose';
 import PostMessage from '../models/postMessage.js';
 
 
-//get all the data
+/*
+Name - get all Posts
+Date - 29/08/2021
+ */
 export const getPosts = async (req, res) => { 
     try {
         const postMessages = await PostMessage.find();  
@@ -13,7 +22,10 @@ export const getPosts = async (req, res) => {
     }
 }
 
-//create a post
+/*
+Name - create Post
+Date - 29/08/2021
+ */
 export const createPost = async (req, res) => {
     const { title, message, selectedFile, creator, tags } = req.body;
 
@@ -28,7 +40,10 @@ export const createPost = async (req, res) => {
     }
 }
 
-//update a post
+/*
+Name - update Post
+Date - 29/08/2021
+ */
 export const updatePost = async (req, res) => {
     const { id: _id } = req.params;
     const post = req.body;
@@ -41,7 +56,10 @@ export const updatePost = async (req, res) => {
 
 }
 
-//delete a post
+/*
+Name - delete Post
+Date - 29/08/2021
+ */
 export const deletePost = async (req, res) => {
     const { id } = req.params; 
 
@@ -52,7 +70,10 @@ export const deletePost = async (req, res) => {
     res.json({ message: "Post Deleted Successfully." });
 }
 
-//like a post (additional feture  ~ update function )
+/*
+Name - like Post
+Date - 29/08/2021
+ */
 export const likePost = async (req, res) => {
     const { id } = req.params;
 
