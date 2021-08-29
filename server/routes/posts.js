@@ -7,10 +7,10 @@ const router = express.Router();
 //http://localhost:5000/posts
 
 //all the routes 
-router.get('/', getPosts);
-router.post('/', createPost);
-router.patch('/:id', updatePost);
-router.delete('/:id', deletePost);
-router.patch('/:id/likePost', likePost);
+router.get('/getallPosts', getPosts);
+router.post('/createPost', createPost);
+router.patch('/updatePost/:id', updatePost);
+router.delete('/deletePost/:id', deletePost);
+router.patch('/likePost/:id', likePost);
 
 export default router;

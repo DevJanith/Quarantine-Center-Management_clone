@@ -16,4 +16,7 @@ export default makeStyles(() => ({
     image: {
         marginLeft: '15px',
     },
+    test: {
+        margin: '50px 0',
+    },
 }));

@@ -1,0 +1,15 @@
+import express from 'express';
+
+import { getPayers, createPayer, updatePayer, deletePayer } from '../controllers/financePayer.js';
+
+const router = express.Router();
+
+//http://localhost:5000/payer
+
+//all the routes 
+router.get('/getallPayers', getPayers);
+router.post('/createPayer', createPayer);
+router.patch('/updatePayer/:id', updatePayer);
+router.delete('/deletePayer/:id', deletePayer); 
+
+export default router;
